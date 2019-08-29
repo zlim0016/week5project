@@ -9,7 +9,7 @@ app.set('view engine','html');
 
 app.use(express.static('funcss'));
 app.use(express.static('views'));
-app.use(express.static('css'));
+app.use(express.static('css'));ddd
 
 
 let db=[];
