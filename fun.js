@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended:false})); //allow Express to understand 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine','html');
 
-app.use(express.static('img'));
+app.use(express.static('funcss'));
 app.use(express.static('views'));
 app.use(express.static('css'));
 
@@ -21,23 +21,25 @@ example1={
 db.push(example1);
 
 app.get('/', function (req, res){
-    res.render('index5.html');
+    res.render('indexfun.html');
 })
 
-app.get('/addtask', function (req, res){
-    res.render('addtask.html');
+app.get('/fun2', function (req, res){
+    res.render('fun2.html');
 })
 
-app.get('/listtask', function (req,res){
-    res.render('listtask.html', {task: db});
+app.get('/fun1', function (req,res){
+    res.render('fun1.html', {task: db});
 })
 
-app.post('/newTask', function (req, res){
-    console.log(req.body)
-    db.push(req.body);
-    res.render('listtask.html', {task: db});
-    
+app.get('/fun3', function (req,res){
+    res.render('fun3.html', {task: db});
 })
+
+app.get('/fun4', function (req,res){
+    res.render('fun4.html', {task: db});
+})
+
 //console.log(db);
 
 app.listen(8080);
