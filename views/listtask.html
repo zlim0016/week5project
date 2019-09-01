@@ -10,22 +10,36 @@
 <body>
         <a href="/index5.html">Home</a>
         <a href="/addtask.html">Add new Task</a>
+        <a href="/deletetask.html">Delete Task</a>
+        <a href="/updatetask.html">Update Task</a>
     </br>
     <h3>
         <table>
             <tr>
-                <td>Name</td>
-                <td>Due Date</td>
-                <td>Description</td>
+                <td>Task ID</td>
+                <td>Task Name</td>
+                <td>Assign To</td>
+                <td>Task Due Date</td>
+                <td>Task Status</td>
+                <td>Task Description</td>
                 
             </tr>
             <% for ( var i =0; i< task.length;i++){ %>
                 <tr>
                     <td>
+                        <%= task[i]._id %>
+                    </td>
+                    <td>
                         <%= task[i].taskName %>
                     </td>
                     <td>
+                        <%= task[i].assignTo %>
+                    </td>
+                    <td>
                         <%= task[i].taskDue %>
+                    </td>
+                    <td>
+                        <%= task[i].taskStatus %>
                     </td>
                     <td>
                         <%= task[i].taskDesc %>
@@ -33,5 +47,8 @@
                 </tr>
                 <% }%>
     </h3>
+    <br>
+    
+    
 </body>
 </html>
