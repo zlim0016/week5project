@@ -55,7 +55,7 @@ app.get('/listtask', function (req,res){
 app.get('/deleteOldComplete', function (req, res){
 
     
-    db.collection('week5table').deleteMany({taskStatus: 'Complete', taskDue: { $gte: new Date('09-03-2019') } } , function (err, obj) {
+    db.collection('week5table').deleteMany({taskStatus: 'Complete', taskDue: { $gte: new Date('03-09-2019') } } , function (err, obj) {
         console.log(obj.result);
     })
 
