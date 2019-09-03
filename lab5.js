@@ -52,6 +52,21 @@ app.get('/listtask', function (req,res){
     
 })
 
+app.get('/deleteOldComplete', function (req, res){
+
+    
+    db.collection('week5table').deleteMany({taskStatus: 'Complete', taskDue: '2019-09-09'} , function (err, obj) {
+        console.log(obj.result);
+    })
+
+    db.collection('week5table').find({}).toArray(function (err, data){
+        res.render('listtask.html', {task: data});
+    })
+   
+    
+})
+
+
 app.post('/newTask', function (req, res){
     let task= req.body;
     db.collection('week5table').insertOne(task);

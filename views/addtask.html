@@ -3,17 +3,17 @@
         <link rel="stylesheet" href="style.css">
 </head>
     <body>
-            <a href="/index5.html">Home</a>
-            <a href="/listtask.html">List all task</a>
-            <a href="/deletetask.html">Delete Task</a>
-            <a href="/updatetask.html">Delete Task</a>
+            <a  class= 'link' href="/index5.html">Home</a>
+           
+            <a class= 'link' href="/deletetask.html">Delete Task</a>
+            <a class= 'link' href="/updatetask.html">Delete Task</a>
 
-    </br>
+    </br></br>
         <form action="newTask" method="POST">
             Task Name <input type="text" name="taskName" /> <br />
             Assign To <input type="text" name="assignTo" /> <br />
-            Task Due <input type="text" name="taskDue" /> <br />
-            Task status <input type="text" name="taskStatus" /> <br />
+            Task Due ('yy-mm-ddd')<input type="text" name="taskDue" /> <br />
+            Task status (In Progress/ Complete) <input type="text" name="taskStatus" /> <br />
             Task Desc <input type="text" name="taskDesc" /><br />
            
             <button>Submit</button>
