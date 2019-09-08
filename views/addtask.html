@@ -3,17 +3,21 @@
         <link rel="stylesheet" href="style.css">
 </head>
     <body>
+        <center><h1>Add new task</h1></center>
             <a  class= 'link' href="/index5.html">Home</a>
-           
+            <a  class= 'link' href="/adddeveloper.html">Add new Developer</a>
+            <a class= 'link' href="/deletecomplete.html">Delete Complete Tasks</a>
             <a class= 'link' href="/deletetask.html">Delete Task</a>
-            <a class= 'link' href="/updatetask.html">Delete Task</a>
+            <a class= 'link' href="/updatetask.html">Update Task</a>
+            <a class= 'link' href="/listtask">List all Task</a>
+            <a class= 'link' href="/listdeveloper">List all Developer</a>
 
     </br></br>
         <form action="newTask" method="POST">
             Task Name <input type="text" name="taskName" /> <br />
             Assign To <input type="text" name="assignTo" /> <br />
             Task Due ('dd-mm-yyyy')<input type="text" name="taskDue" /> <br />
-            Task status (In Progress/ Complete) <input type="text" name="taskStatus" /> <br />
+            Task status (InProgress/ Complete) <input type="text" name="taskStatus" /> <br />
             Task Desc <input type="text" name="taskDesc" /><br />
            
             <button>Submit</button>

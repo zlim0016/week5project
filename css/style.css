@@ -13,10 +13,24 @@ body {
 .logo {
     font-family: sans-serif;
     font-size: 60px;
-    color:darkslategray;  
+    color:darkslategray; 
+
       
 }
 
 .link {
     font-size: 25px;
+    margin-left: 1em;
+    color: darkblue;
+    
+    
+}
+
+center {
+    border: 3px;
+    border-style: solid;
+    color:white;
+    border-color: darkslategray;
+    background-color: darkslategray;
+    font-size: 20px;
 }
