@@ -80,20 +80,17 @@ app.get('/adddeveloper', function (req, res){
     res.render('adddeveloper.html');
 })
 
-/*app.get('/deleteOldComplete', function (req, res){
 
-    
-    db.collection('week5table').deleteMany({taskStatus: 'Complete', taskDue: { $gte: new Date('03-09-2019') } } , function (err, obj) {
-        console.log(obj.result);
-    })
+app.get('/changename/:oldfirstname/:newfirstname', function (req, res){
+    oldName= req.params.oldfirstname;
+    newName= req.params.newfirstname;
+    console.log(oldName);
+    console.log(newName);
+    Developer.updateMany( {'name.firstName': oldName}, {$set: {'name.firstName': newName}}, function (err, doc){
+        console.log(doc);
+    });
 
-    db.collection('week5table').find({}).toArray(function (err, data){
-        res.render('listtask.html', {task: data});
-    })
-   
-    
 })
-*/
 
 
 //POST
